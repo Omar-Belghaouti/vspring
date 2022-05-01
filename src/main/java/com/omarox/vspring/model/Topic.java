@@ -1,4 +1,4 @@
-package model;
+package com.omarox.vspring.model;
 
 public class Topic {
 
