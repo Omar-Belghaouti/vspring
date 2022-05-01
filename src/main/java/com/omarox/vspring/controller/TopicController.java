@@ -6,6 +6,7 @@ import com.omarox.vspring.model.Topic;
 import com.omarox.vspring.service.TopicService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -39,6 +40,11 @@ public class TopicController {
     @PutMapping("/{id}")
     public void updateTopic(@PathVariable String id, @RequestBody Topic topic) {
         topicService.updateTopic(id, topic);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteTopic(@PathVariable String id) {
+        topicService.deleteTopic(id);
     }
 
 }
